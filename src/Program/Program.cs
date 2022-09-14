@@ -6,6 +6,7 @@ namespace gameLoop
     {
         static void Main(string[] args)
         {
+            Elfo Legolas = new Program.Elfo ();
         }
     }
 }
