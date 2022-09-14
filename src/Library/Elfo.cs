@@ -10,12 +10,16 @@ namespace Program
 
         private int defensa = 100;
 
-        public string Name { get => name; set => name = value; }
+        public Elfo(string name)
+        {
+            this.name = name;
+        }
+        public string Name { get; set; }
         public int Daño { get => daño; set => daño = value; }
         public int Defensa { get => defensa; set => defensa = value; }
 
         //PLANTEO LOS METODOS PARA EVALUAR ENTRE TODOS EN CLASE
-        
+
         public int RecibirDaño ()
         {
             return a;
