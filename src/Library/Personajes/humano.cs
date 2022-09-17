@@ -14,8 +14,6 @@ namespace Program
         private Item rightHand;
         private Item leftHand;
 
-
-
         //Constructor clase Humano
         public Humano(string nam, int healt, int damag, int defens){
 
@@ -26,12 +24,16 @@ namespace Program
             this.items = new List<Item>();
             this.rightHand = null;
             this.leftHand = null;
-
-
         }
 
+        //Ataca un enemigo
+        public void Attack(Enemigo enemy){
+
+            enemy.ApplyDamage(this.attack);
+        }
+        
         //Aplica daño recibido
-        public void ApplyDamage(int daño, string tipo){
+        public void ApplyDamage(int daño){
 
             int damageTaken = daño - this.defense;
             
