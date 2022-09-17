@@ -64,7 +64,8 @@ namespace Program
                     if(items[i].type == "Weapon"){
 
                         this.rightHand = items[i];
-                        this.damage += this.items[i].attack;                        
+                        this.damage += this.items[i].attack;
+                        this.defense += this.items[i].defense;                        
                         
                     }
                     else if(items[i].type == "Shield"){

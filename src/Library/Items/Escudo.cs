@@ -1,0 +1,18 @@
+using System;
+
+namespace program{
+
+    public class Escudo{
+
+        public string name {get; set}
+        public int damage {get; set}
+        public int defense {get; set}
+
+        public Escudo(string name, int damage, int defense){
+
+            this.name = name;
+            this.damage = damage;
+            this.defense = defense;
+        }
+    }
+}
