@@ -1,6 +1,6 @@
-using System;
+/*using System;
 
-namespace gameLoop{
+namespace Program{
 
     public class Item{
 
@@ -14,7 +14,7 @@ namespace gameLoop{
             this.name = nam;
             this.type = typ;
             this.attack = attac;
-            this.defens = defens;
+            this.defense = defens;
         }
 
         
@@ -27,4 +27,4 @@ namespace gameLoop{
 
     }
 
-}
+}*/

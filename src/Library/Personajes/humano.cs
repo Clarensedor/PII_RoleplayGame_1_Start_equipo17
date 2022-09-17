@@ -1,18 +1,18 @@
 using System;
 using System.Collections.Generic;
 
-namespace gameLoop
+namespace Program
 {
 
     public class Humano {
 
-        string name{get; set}
-        int health{get; set}
-        int damage{get; set}
-        int defense{get; set}
-        List<Item> items;
-        Item rightHand;
-        Item leftHand;
+        public string name{get; set}
+        private int health{get; set}
+        public int damage{get; set}
+        public int defense{get; set}
+        private List<Item> items;
+        private Item rightHand;
+        private Item leftHand;
 
 
         public Humano(string nam, int healt, int damag, int defens){
@@ -20,6 +20,7 @@ namespace gameLoop
             this.name = nam;
             this.health = healt;
             this.damage = damag;
+            this.defense = defens;
             this.items = new List<Item>();
             this.rightHand = null;
             this.leftHand = null;
@@ -30,28 +31,19 @@ namespace gameLoop
         //Aplica daño recibido
         public void ApplyDamage(int daño, string tipo){
 
-            damageTaken = daño;
-            damageTaken = damageTaken - defense;
-            if(damageTaken < 0){
+            int damageTaken = daño - this.defense;
+            
+            if(damageTaken > 0){
 
-                return;
+                this.health -= damageTaken;
                 
             }
-            else{            
-
-
-                this.health = this.health - damageTaken;
-                return;            
-            
-            }
-
-
         }
 
         //Aplica curaciones
         public void Heal(int curacion){
 
-            this.health = this.health + curacion;
+            this.health += curacion;
             
         }
 
@@ -65,30 +57,44 @@ namespace gameLoop
         //Equipa items del inventario
         public void EquipItem(string itemName){
 
-            for(i = 0; i <= this.items.GetRange(); i++){
+            for(int i = 0; i <= this.items.GetRange(); i++){
 
                 if(items[i].name == itemName){
 
                     if(items[i].type == "Weapon"){
 
-                        rightHand = items[i];
-                        this.damage = this.damage +  this.items[i].attack;                        
+                        this.rightHand = items[i];
+                        this.damage += this.items[i].attack;                        
                         
                     }
                     else if(items[i].type == "Shield"){
 
-                        leftHand = items[i];
-                        this.defense = this.defense + this.items[i].defense;
+                        this.leftHand = items[i];
+                        this.defense += this.items[i].defense;
                         
                     }                    
-                    else if(items[i].type == "potion"){
+                    else if(items[i].type == "Potion"){
 
-                        this.health == this.health + this.items[i].defense;
+                        this.health = this.Heal(this.items[i].defense);
                         this.items.RemoveAt(i);
                         
                     }
                 }
             }
         }
+
+        //Desequipa items de las manos
+        public void UnequipItem(string itemName){
+
+            if(this.rightHand.name == itemName){
+                
+                this.rightHand = null;
+
+            } else if(this.leftHand.name == itemName){
+
+                this.leftHand = null;
+                
+            }
+        }      
     }
 }
