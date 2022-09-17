@@ -30,8 +30,11 @@ namespace Program
         public void Attack(Enemigo enemy){
 
             enemy.ApplyDamage(this.attack);
+            if(enemy.health == 0){
+                PickItem(enemy.DropLoot());
+            }
         }
-        
+
         //Aplica daño recibido
         public void ApplyDamage(int daño){
 

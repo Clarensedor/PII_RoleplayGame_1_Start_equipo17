@@ -27,6 +27,12 @@ namespace program {
                 this.health -= damageTaken;
                 
             }
+        }
+
+        //Dropea Loot
+        public void DropLoot(){
+
+            return item;
         }        
     }
 }
