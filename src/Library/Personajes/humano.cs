@@ -15,6 +15,8 @@ namespace Program
         private Item leftHand;
 
 
+
+        //Constructor clase Humano
         public Humano(string nam, int healt, int damag, int defens){
 
             this.name = nam;
