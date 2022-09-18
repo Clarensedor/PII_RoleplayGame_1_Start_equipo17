@@ -9,7 +9,7 @@ namespace Program
         public int daño {get; set;}
         public int defensa {get; set;}
         public int ataque {get; set;}
-        public List<Item> listaItems {get;set;}
+        
 
         public Troll(string nombre, int vida, int daño, int defensa)
         {
@@ -41,11 +41,7 @@ namespace Program
             this.ataque=ataque;
         }
 
-        public List<T> equiparItem(List item)
-        {
-            listaItems = item;
-            return listaItems;
-        }
+        
     }
 }
 
