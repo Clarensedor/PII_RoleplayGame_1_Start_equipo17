@@ -2,7 +2,7 @@ using System;
 
 namespace Program
 {
-    class Baston
+    public class Baston
     {
         string nombre;
         int ataque = 150;

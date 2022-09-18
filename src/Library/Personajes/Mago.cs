@@ -20,7 +20,6 @@ namespace Program
             this.damage = danio;
             this.defense = defensa;
             this.baston = null;
-            
         }
 
         //Aplica daño recibido
