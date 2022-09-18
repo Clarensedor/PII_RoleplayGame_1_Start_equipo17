@@ -10,8 +10,7 @@ namespace Program
     {
         static void Main(string[] args)
         {
-            Elfo legolas = new Elfo (1,"Legolas", 100, 100 );
-            Console.WriteLine (legolas);
+        
         }
     }
 }

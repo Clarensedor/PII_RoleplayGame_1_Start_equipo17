@@ -19,26 +19,28 @@ namespace Program
             this.defensa = defensa;
         }
 
-        public int recibirDaño(int daño)
+        public int RecibirDaño(int daño)
         {
             vida-=daño;
             return vida; 
         }
 
-        public int curarse(int poción)
+        public int Curarse(int poción)
         {
             vida+=poción;
             return vida;
         }
 
-        public int obtenerDefensa(int defensa)
+        public int ObtenerDefensa(int defensa)
         {
             this.defensa=defensa;
+            return 1;
         }
         
-        public int obtenerAtaque(int ataque)
+        public int ObtenerAtaque(int ataque)
         {
             this.ataque=ataque;
+            return 1;
         }
 
         
