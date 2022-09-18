@@ -9,14 +9,17 @@ namespace Program
       private int defensa;
 
       //constructor
-      public Pony(string nombre, int ataque){
+      public Pony(string nombre, int ataque, int defensa){
          this.Nombre = nombre;
          this.Ataque = ataque;
+         this.Defensa = defensa;
       }
 
       //getters and seters
       public string Nombre { get; private set; }
+
       public int Ataque { get; private set; }
+      public int Defensa { get; private set; }
 
    }
 

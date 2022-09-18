@@ -10,7 +10,19 @@ namespace Program
     {
         static void Main(string[] args)
         {
+<<<<<<< HEAD
         
+=======
+<<<<<<< HEAD
+
+            Enano elfo1  = new Enano("Tony", 100 , 20, 10); 
+            Pony pony1 = new Pony("Facu", 10, 10);
+
+=======
+            Elfo legolas = new Elfo (1,"Legolas", 100, 100 );
+            Console.WriteLine (legolas);
+>>>>>>> af235ed1f47b8dd03e9f6b67e5d87f46c91fa504
+>>>>>>> 827336fea1630c4157af76b42d6eb1711ec33f95
         }
     }
 }
