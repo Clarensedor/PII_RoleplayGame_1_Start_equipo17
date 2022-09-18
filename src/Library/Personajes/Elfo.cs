@@ -47,18 +47,23 @@ namespace Program
       //Recibe daño
       public void RecibirDanio(int dañoRecibido)
       {
+
          this.vida = this.vida - (dañoRecibido - this.defensa);
+      
       }
 
       //Vuelve a su vida inicial
       public void Curarse()
       {
+
           this.vida = vidaTotal;
+
       }
 
       public void EquiparArco(){
 
         this.Danio += this.Arco.Ataque;
+
       }
       
       public void EquiparFlechas(){
