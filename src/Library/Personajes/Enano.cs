@@ -15,17 +15,16 @@ namespace Program
       private int danio;
       private int defensa;
 
-      private int items;
-
       public  int vidaTotal;
 
       //se define el constructor
-      public Enano(int id, string nombre, int vida, int danio)
+      public Enano(string nombre, int vida, int danio, int defesa)
       {
          this.Nombre = nombre;
          this.Vida = vida;
          vidaTotal = vida;
          this.Danio = danio;
+         this.Defensa = defensa;
       }
 
       //definimos getters y setters
@@ -34,6 +33,7 @@ namespace Program
       public int Vida{get{return this.vida;}set{this.vida = value;}}
 
       public int Danio{get{return this.danio;}set{this.danio = value;}}
+      public int Defensa{get{return this.danio;}set{this.danio = value;}}
 
 
       //metodos/comportamientos
@@ -43,6 +43,7 @@ namespace Program
 
       public void Curarse(int dañoRecibido)
       {
+          
       }
       public void ObtenerDefensa(int dañoRecibido)
       {
@@ -55,5 +56,5 @@ namespace Program
       {
       }
 
-   }
+    }
 }
