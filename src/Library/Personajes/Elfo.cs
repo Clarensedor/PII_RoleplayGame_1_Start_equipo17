@@ -11,6 +11,8 @@ namespace Program
     {      //Se definen los atributos/propiedades
     
     //Se definen los atributos/propiedades
+      public int id;
+
       private string nombre;
       private int vida;
       private int danio;
@@ -19,8 +21,9 @@ namespace Program
       public  int vidaTotal;
 
       //se define el constructor
-      public Elfo(string nombre, int vida, int danio, int defesa)
+      public Elfo(int id, string nombre, int vida, int danio, int defesa)
       {
+         this.Id = id;
          this.Nombre = nombre;
          this.Vida = vida;
          vidaTotal = vida;
@@ -29,6 +32,7 @@ namespace Program
       }
 
       //definimos getters y setters
+      public int Id {get;}
       public string Nombre{ get{return this.nombre;}set{this.nombre = value;}}
 
       public int Vida{get{return this.vida;}set{this.vida = value;}}

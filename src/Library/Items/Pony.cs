@@ -1,3 +1,9 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
 namespace Program
 {
    //Se declara la clase
@@ -8,11 +14,13 @@ namespace Program
       private int ataque;
       private int defensa;
 
+      private static List<int> charactersId = new List<int>();
+
       //constructor
       public Pony(string nombre, int ataque, int defensa){
          this.Nombre = nombre;
          this.Ataque = ataque;
-         this.Defensa = defensa;
+         this.Defensa = defensa; 
       }
 
       //getters and seters
@@ -20,7 +28,11 @@ namespace Program
 
       public int Ataque { get; private set; }
       public int Defensa { get; private set; }
-
+      public void CharactersId(int identificador)
+      {
+            charactersId.Add(identificador);
+      }
+      
    }
 
 

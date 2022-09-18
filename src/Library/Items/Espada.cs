@@ -8,6 +8,8 @@ namespace program{
         public int damage {get; set;}
         public int defense {get; set;}
 
+        
+
         public Espada(string name, int damage, int defense){
 
             this.name = name;
