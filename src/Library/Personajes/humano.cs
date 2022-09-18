@@ -26,14 +26,19 @@ namespace Program
             this.leftHand = null;
         }
 
+<<<<<<< Updated upstream
         //Ataca un enemigo
         public void Attack(Enemigo enemy){ // no habiamos quedado en que no habia un metodo que era atacar, sino solo recibir daño?
+=======
+       /* //Ataca un enemigo
+        public void Attack(Enemigo enemy){
+>>>>>>> Stashed changes
 
             enemy.ApplyDamage(this.attack);
             if(enemy.health == 0){
                 PickItem(enemy.DropLoot());
             }
-        }
+        }*/
 
         //Aplica daño recibido
         public void ApplyDamage(int daño){
