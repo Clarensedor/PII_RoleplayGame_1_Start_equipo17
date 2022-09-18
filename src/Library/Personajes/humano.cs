@@ -11,23 +11,23 @@ namespace Program
         public int damage{get; set}
         public int defense{get; set}
         private List<Item> items;
-        private Item rightHand;
+        private Item rightHand; // que es Item?
         private Item leftHand;
 
         //Constructor clase Humano
-        public Humano(string nam, int healt, int damag, int defens){
+        public Humano(string nam, int healt, int damag, int defens){ // Tendriamos que poner todo esto en comun, sino es medio confuso
 
             this.name = nam;
             this.health = healt;
             this.damage = damag;
             this.defense = defens;
             this.items = new List<Item>();
-            this.rightHand = null;
+            this.rightHand = null; // Por que aca pusiste null?
             this.leftHand = null;
         }
 
         //Ataca un enemigo
-        public void Attack(Enemigo enemy){
+        public void Attack(Enemigo enemy){ // no habiamos quedado en que no habia un metodo que era atacar, sino solo recibir daño?
 
             enemy.ApplyDamage(this.attack);
             if(enemy.health == 0){
