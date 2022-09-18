@@ -18,7 +18,7 @@ namespace Program
       public  int vidaTotal;
 
       //se define el constructor
-      public Enano(string nombre, int vida, int danio, int defesa)
+      public Enano(string nombre, int vida, int danio, int defensa)
       {
          this.Nombre = nombre;
          this.Vida = vida;
@@ -41,7 +41,7 @@ namespace Program
       //Recibe daño
       public void RecibirDanio(int dañoRecibido)
       {
-         this.Vida -= dañoRecibido;
+         this.vida = this.vida - (dañoRecibido - this.defensa);
       }
 
       //Vuelve a su vida inicial
