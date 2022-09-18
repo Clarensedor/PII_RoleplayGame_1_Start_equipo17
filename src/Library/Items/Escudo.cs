@@ -4,9 +4,9 @@ namespace program{
 
     public class Escudo{
 
-        public string name {get; set}
-        public int damage {get; set}
-        public int defense {get; set}
+        public string name {get; set;}
+        public int damage {get; set;}
+        public int defense {get; set;}
 
         public Escudo(string name, int damage, int defense){
 

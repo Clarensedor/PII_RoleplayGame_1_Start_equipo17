@@ -5,7 +5,7 @@ namespace Program
     class Piedra
     {
         string nombre;
-        int Ataque = 100;
-        int Defensa = 100;
+        int ataque = 100;
+        int defensa = 100;
     }
 }
