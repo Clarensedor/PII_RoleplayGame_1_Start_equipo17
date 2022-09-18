@@ -9,30 +9,48 @@ namespace Program
 {
     public class Elfo
     {      //Se definen los atributos/propiedades
-      public string nombre;
+    
+    //Se definen los atributos/propiedades
+      private string nombre;
       private int vida;
       private int danio;
       private int defensa;
 
-      private int items;
-
       public  int vidaTotal;
 
-        public string Nombre { get => nombre; set => nombre = value; }   
-
-        public int Vida{get{return this.Vida;}set{this.Vida = value;}}
-
-        public int Danio{get{return this.danio;}set{this.danio = value;}}
-
-        //se define el constructor
-        public Elfo(int id, string nombre, int vida, int danio)
+      //se define el constructor
+      public Elfo(string nombre, int vida, int danio, int defesa)
       {
          this.Nombre = nombre;
          this.Vida = vida;
          vidaTotal = vida;
          this.Danio = danio;
+         this.Defensa = defensa;
       }
 
+      //definimos getters y setters
+      public string Nombre{ get{return this.nombre;}set{this.nombre = value;}}
+
+      public int Vida{get{return this.vida;}set{this.vida = value;}}
+
+      public int Danio{get{return this.danio;}set{this.danio = value;}}
+      public int Defensa{get{return this.danio;}set{this.danio = value;}}
+
+      //metodos/comportamientos
+      
+      //Recibe daño
+      public void RecibirDanio(int dañoRecibido)
+      {
+         this.vida = this.vida - dañoRecibido;
+      }
+
+      //Vuelve a su vida inicial
+      public void Curarse()
+      {
+          this.vida = vidaTotal;
+      }
+
+/*
         //PLANTEO LOS METODOS PARA EVALUAR ENTRE TODOS EN CLASE
 
         public int RecibirDaño ()
@@ -59,5 +77,6 @@ namespace Program
         {
             return 1;
         }
+        */
     }
 }

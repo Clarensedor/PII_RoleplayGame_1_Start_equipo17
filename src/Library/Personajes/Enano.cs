@@ -37,11 +37,14 @@ namespace Program
 
 
       //metodos/comportamientos
+      
+      //Recibe daño
       public void RecibirDanio(int dañoRecibido)
       {
          this.vida = this.vida - dañoRecibido;
       }
 
+      //Vuelve a su vida inicial
       public void Curarse()
       {
           this.vida = vidaTotal;
