@@ -1,48 +1,63 @@
 using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
 
 namespace Program
 {
-    class Elfo
-    {
-        public string name;
-        private int vida = 100;
-        public int daño = 100;
+    public class Elfo
+    {      //Se definen los atributos/propiedades
+      public string nombre;
+      private int vida;
+      private int danio;
+      private int defensa;
 
-        private int defensa = 100;
+      private int items;
 
-        public Elfo(string name)
-        {
-            this.name = name;
-        }
-        public string Name { get; set; }
-        public int Daño { get => daño; set => daño = value; }
-        public int Defensa { get => defensa; set => defensa = value; }
+      public  int vidaTotal;
+
+        public string Nombre { get => nombre; set => nombre = value; }   
+
+        public int Vida{get{return this.Vida;}set{this.Vida = value;}}
+
+        public int Danio{get{return this.danio;}set{this.danio = value;}}
+
+        //se define el constructor
+        public Elfo(int id, string nombre, int vida, int danio)
+      {
+         this.Nombre = nombre;
+         this.Vida = vida;
+         vidaTotal = vida;
+         this.Danio = danio;
+      }
 
         //PLANTEO LOS METODOS PARA EVALUAR ENTRE TODOS EN CLASE
 
         public int RecibirDaño ()
         {
-            return a;
+            return 1;
         }
         
         public int Curarse ()
         {
-            return a;
+            return 1;
         }
         
         public int ObtenerDefensa ()
         {
-            return a;
+            return 1;
         }
         
         public int ObtenerAtaque ()
         {
-            return a;
+            return 1;
         }
         
         public int EquiparItem ()
         {
-            return a;
+            return 1;
         }
     }
 }
