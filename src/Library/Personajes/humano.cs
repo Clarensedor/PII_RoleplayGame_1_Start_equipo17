@@ -6,13 +6,10 @@ namespace Program
 
     public class Humano {
 
-        public string name{get; set}
-        private int health{get; set}
-        public int damage{get; set}
-        public int defense{get; set}
-        private List<Item> items;
-        private Item rightHand; // que es Item?
-        private Item leftHand;
+        public string name{get; set;}
+        private int health{get; set;}
+        public int damage{get; set;}
+        public int defense{get; set;}
 
         //Constructor clase Humano
         public Humano(string nam, int healt, int damag, int defens){ // Tendriamos que poner todo esto en comun, sino es medio confuso
@@ -21,18 +18,10 @@ namespace Program
             this.health = healt;
             this.damage = damag;
             this.defense = defens;
-            this.items = new List<Item>();
-            this.rightHand = null; // Por que aca pusiste null?
-            this.leftHand = null;
         }
 
-<<<<<<< Updated upstream
-        //Ataca un enemigo
-        public void Attack(Enemigo enemy){ // no habiamos quedado en que no habia un metodo que era atacar, sino solo recibir daño?
-=======
        /* //Ataca un enemigo
         public void Attack(Enemigo enemy){
->>>>>>> Stashed changes
 
             enemy.ApplyDamage(this.attack);
             if(enemy.health == 0){
@@ -58,7 +47,7 @@ namespace Program
             this.health += curacion;
             
         }
-
+/*
         //Agrega un item al inventario
         public void PickItem(Item item){
 
@@ -110,6 +99,7 @@ namespace Program
                 this.leftHand = null;
                 
             }
-        }      
+        }
+        */      
     }
 }
