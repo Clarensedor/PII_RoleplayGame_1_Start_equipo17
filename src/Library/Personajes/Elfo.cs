@@ -39,8 +39,11 @@ namespace Program
 
       public int Danio{get{return this.danio;}set{this.danio = value;}}
       public int Defensa{get{return this.defensa;}set{this.defensa = value;}}
+<<<<<<< HEAD
       public Arco Arco{get{return this.arco;}set{this.arco = value;}}
       public Flechas Flechas{get{return this.flechas;}set{this.flechas = value;}}
+=======
+>>>>>>> 1c72b1ba4290db4085c73c3998bb3352ed3ab07d
 
       //metodos/comportamientos
       

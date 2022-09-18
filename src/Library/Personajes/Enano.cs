@@ -33,7 +33,7 @@ namespace Program
       public int Vida{get{return this.vida;}set{this.vida = value;}}
 
       public int Danio{get{return this.danio;}set{this.danio = value;}}
-      public int Defensa{get{return this.danio;}set{this.danio = value;}}
+      public int Defensa{get{return this.defensa;}set{this.defensa = value;}}
 
 
       //metodos/comportamientos
@@ -41,7 +41,7 @@ namespace Program
       //Recibe daño
       public void RecibirDanio(int dañoRecibido)
       {
-         this.vida = this.vida - dañoRecibido;
+         this.Vida -= dañoRecibido;
       }
 
       //Vuelve a su vida inicial
