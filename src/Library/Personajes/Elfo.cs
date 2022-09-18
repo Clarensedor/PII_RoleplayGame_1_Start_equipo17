@@ -15,17 +15,21 @@ namespace Program
       private int vida;
       private int danio;
       private int defensa;
+      private Arco arco;
+      private Flechas flechas;
 
       public  int vidaTotal;
 
       //se define el constructor
-      public Elfo(string nombre, int vida, int danio, int defesa)
+      public Elfo(string nombre, int vida, int danio, int defesa, Arco arco, Flechas flechas)
       {
          this.Nombre = nombre;
          this.Vida = vida;
          vidaTotal = vida;
          this.Danio = danio;
          this.Defensa = defensa;
+         this.Arco = arco;
+         this.Flechas = flechas;
       }
 
       //definimos getters y setters
@@ -34,7 +38,9 @@ namespace Program
       public int Vida{get{return this.vida;}set{this.vida = value;}}
 
       public int Danio{get{return this.danio;}set{this.danio = value;}}
-      public int Defensa{get{return this.danio;}set{this.danio = value;}}
+      public int Defensa{get{return this.defensa;}set{this.defensa = value;}}
+      public Arco Arco{get{return this.arco;}set{this.arco = value;}}
+      public Flechas Flechas{get{return this.flechas;}set{this.flechas = value;}}
 
       //metodos/comportamientos
       
@@ -48,6 +54,16 @@ namespace Program
       public void Curarse()
       {
           this.vida = vidaTotal;
+      }
+
+      public void EquiparArco(){
+
+        this.Danio += this.Arco.Ataque;
+      }
+      
+      public void EquiparFlechas(){
+
+        this.Danio += this.Flechas.Ataque;
       }
 
 /*

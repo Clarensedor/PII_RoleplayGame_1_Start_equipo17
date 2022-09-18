@@ -2,10 +2,10 @@ using System;
 
 namespace Program
 {
-    class Arco
+    public class Arco
     {
         string nombre;
-        int Ataque = 100;
-        int Defensa = 100;
+        int Ataque ;
+        int Defensa;
     }
 }
