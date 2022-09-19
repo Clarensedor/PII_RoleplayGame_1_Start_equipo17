@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace Program
 {
     public class Elfo
-    {      //Se definen los atributos/propiedades
+    {     
     
     //Se definen los atributos/propiedades
       private string nombre;
@@ -25,7 +25,7 @@ namespace Program
       {
          this.Nombre = nombre;
          this.Vida = vida;
-         vidaTotal = vida;
+         this.vidaTotal = vida;
          this.Danio = danio;
          this.Defensa = defensa;
          this.Arco = arco;
@@ -34,13 +34,12 @@ namespace Program
 
       //definimos getters y setters
       public string Nombre{ get{return this.nombre;}set{this.nombre = value;}}
-
       public int Vida{get{return this.vida;}set{this.vida = value;}}
-
       public int Danio{get{return this.danio;}set{this.danio = value;}}
       public int Defensa{get{return this.defensa;}set{this.defensa = value;}}
       public Arco Arco{get{return this.arco;}set{this.arco = value;}}
       public Flechas Flechas{get{return this.flechas;}set{this.flechas = value;}}
+
 
       //metodos/comportamientos
       
@@ -60,9 +59,9 @@ namespace Program
 
       }
 
-      public void EquiparArco(){
+      public void EquiparEspada(){
 
-        this.Danio += this.Arco.Ataque;
+        this.Danio += this.Espada.Ataque;
 
       }
       
@@ -70,34 +69,5 @@ namespace Program
 
         this.Danio += this.Flechas.Ataque;
       }
-
-/*
-        //PLANTEO LOS METODOS PARA EVALUAR ENTRE TODOS EN CLASE
-
-        public int RecibirDaño ()
-        {
-            return 1;
-        }
-        
-        public int Curarse ()
-        {
-            return 1;
-        }
-        
-        public int ObtenerDefensa ()
-        {
-            return 1;
-        }
-        
-        public int ObtenerAtaque ()
-        {
-            return 1;
-        }
-        
-        public int EquiparItem ()
-        {
-            return 1;
-        }
-        */
     }
 }

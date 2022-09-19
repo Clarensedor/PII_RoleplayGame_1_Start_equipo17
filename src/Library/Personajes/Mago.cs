@@ -48,6 +48,9 @@ namespace Program
       {
 
          this.vida = this.vida - (dañoRecibido - this.defensa);
+         if(this.vida < 0){
+          this.vida = 0;
+         }
       
       }
 
