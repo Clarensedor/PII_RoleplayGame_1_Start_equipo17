@@ -59,9 +59,9 @@ namespace Program
 
       }
 
-      public void EquiparEspada(){
+      public void EquiparArco(){
 
-        this.Danio += this.Espada.Ataque;
+        this.Danio += this.Arco.Ataque;
 
       }
       

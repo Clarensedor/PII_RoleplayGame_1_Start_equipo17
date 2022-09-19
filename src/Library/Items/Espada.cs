@@ -1,18 +1,29 @@
 using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace program{
+namespace Program
+{
+   //Se declara la clase
+   public class Espada {
 
-    public class Espada{
+      //Se definen los atributos/propiedades
+      private string nombre;
+      private int ataque;
+      private int defensa;
 
-        public string name {get; set;}
-        public int damage {get; set;}
-        public int defense {get; set;}
+      //constructor
+      public Espada(string nombre, int ataque, int defensa){
+         this.Nombre = nombre;
+         this.Ataque = ataque;
+         this.Defensa = defensa;
+      }
 
-        public Espada(string name, int damage, int defense){
-
-            this.name = name;
-            this.damage = damage;
-            this.defense = defense;
-        }
-    }
+      //getters and seters
+      public string Nombre { get; private set; }
+      public int Ataque { get; private set; }
+      public int Defensa { get; private set; }
+   }
 }
