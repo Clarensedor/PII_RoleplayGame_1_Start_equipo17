@@ -1,56 +1,74 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
 
 namespace Program
 {
+    public class Mago
+    {      
+    //Se definen los atributos/propiedades
+      private string nombre;
+      private int vida;
+      private int danio;
+      private int defensa;
+      private Baston baston;
+      private LibroHechizos libro;
 
-    public class Mago {
+      public  int vidaTotal;
 
-        public string name{get; set;}
-        private int health{get; set;}
-        public int damage{get; set;}
-        public int defense{get; set;}
-        public Baston baston{get;set;}
+      //se define el constructor
+      public Mago(string nombre, int vida, int danio, int defensa, Baston baston, LibroHechizos libro)
+      {
+         this.Nombre = nombre;
+         this.Vida = vida;
+         vidaTotal = vida;
+         this.Danio = danio;
+         this.Defensa = defensa;
+         this.Baston = baston;
+         this.LibroHechizos = libro;
+      }
 
-        //Constructor Mago
-        public Mago(string nombre, int vida, int danio, int defensa){ 
+      //definimos getters y setters
+      public string Nombre{ get{return this.nombre;}set{this.nombre = value;}}
 
-            this.name = nombre;
-            this.health = vida;
-            this.damage = danio;
-            this.defense = defensa;
-            this.baston = null;
-        }
+      public int Vida{get{return this.vida;}set{this.vida = value;}}
 
-        //Aplica daño recibido
-        public void ApplyDamage(int daño){
+      public int Danio{get{return this.danio;}set{this.danio = value;}}
+      public int Defensa{get{return this.defensa;}set{this.defensa = value;}}
+      public Baston Baston{get{return this.baston;}set{this.baston = value;}}
+      public LibroHechizos LibroHechizos{get{return this.libro;}set{this.libro = value;}}
 
-            int damageTaken = daño - this.defense;
-            
-            if(damageTaken > 0){
+      //metodos/comportamientos
+      
+      //Recibe daño
+      public void RecibirDanio(int dañoRecibido)
+      {
 
-                this.health -= damageTaken;
-                
-            }
-        }
-     
-        public void RecibirDanio(int dañoRecibido)
-        {
-        }
+         this.vida = this.vida - (dañoRecibido - this.defensa);
+      
+      }
 
-        public void Curarse(int dañoRecibido)
-        {
-        }
-        public void ObtenerDefensa(int dañoRecibido)
-        {
-        }
-        public void ObtenerAtaque(int dañoRecibido)
-        {
-        }
+      //Vuelve a su vida inicial
+      public void Curarse()
+      {
 
-        public void EquiparItem(int dañoRecibido)
-        {
-        }
+          this.vida = vidaTotal;
+
+      }
+
+      public void EquiparBaston(){
+
+        this.Danio += this.Baston.Ataque;
+
+      }
+      
+      public void EquiparLibro(){
+
+        this.Danio += this.LibroHechizos.Ataque;
+      }
 
     }
 }

@@ -6,17 +6,25 @@ using System.Threading.Tasks;
 
 namespace Program
 {
-    public class Baston
+    public class LibroHechizos
     {
+        public List<Hechizo> hechizos;
         private int ataque;
         
-        public Baston ()
+        public LibroHechizos ()
         {
+            this.hechizos = new List<Hechizo>();
             this.Ataque = 0;
         }
 
         public int Ataque{get{return this.ataque;}set{this.ataque = value;}}
 
-    }
-}        
+        public void AgregarHechizo(Hechizo hechizo)
+        {
 
+            this.hechizos.Add(hechizo);
+
+        }
+
+    }
+}
