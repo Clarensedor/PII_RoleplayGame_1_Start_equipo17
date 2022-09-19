@@ -9,13 +9,16 @@ namespace Program
     public class Baston
     {
         private int ataque;
+        private string nombre;
         
-        public Baston ()
+        public Baston (int ataque, string nombre)
         {
-            this.Ataque = 0;
+            this.Ataque = ataque;
+            this.Nombre = nombre;
         }
 
         public int Ataque{get{return this.ataque;}set{this.ataque = value;}}
+        public string Nombre{get{return this.nombre;}set{this.nombre = value;}}
 
     }
 }        

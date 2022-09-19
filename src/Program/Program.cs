@@ -22,7 +22,6 @@ namespace Program
             Console.WriteLine (enanoVirgo1.Vida);
             Console.WriteLine (enanoVirgo1.Defensa);
 
-
         }
     }
 }

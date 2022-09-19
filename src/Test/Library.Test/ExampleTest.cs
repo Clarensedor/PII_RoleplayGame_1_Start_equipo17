@@ -6,8 +6,6 @@ namespace Test.Library
     public class ExampleTest
     {
         
-        
-        
         [Test]
         public void RecibirDanio1()
         {
@@ -32,12 +30,25 @@ namespace Test.Library
 
 
         [Test]
-        public void Curar(){
+        public void CurarCorrecto(){
+
+            int expected = 100;
+            Elfo legolas = new Elfo ("Legolas", 100, 100,100, null,null);
+            Enano enanoVirgo1  = new Enano("Tony", 100 , 10, 10);
+            legolas.RecibirDanio(enanoVirgo1.Danio);
+            legolas.Curarse();
+            Assert.AreEqual(legolas.Vida, expected); 
 
         }
 
         [Test]
-        public void AgregarItem(){
+        public void AgregarBaston(){
+            
+            int expected = 110; // Esto es la suma del danio del baston (10) + el danio base del mago (100) = 110
+            Baston pepe = new Baston(10,"Pepe");
+            Mago gandalf = new Mago ("Gandalf", 100, 100,100, pepe,null);
+            gandalf.EquiparBaston();
+            Assert.AreEqual(gandalf.Danio,expected);
 
         }
 
