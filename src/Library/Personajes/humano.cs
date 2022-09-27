@@ -67,7 +67,7 @@ namespace Program
         this.Danio += this.Espada.Ataque;
 
       }
-      
+      List 
       public void EquiparEscudo(){
 
         this.Danio += this.Escudo.Defensa;

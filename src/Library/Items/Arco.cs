@@ -10,6 +10,7 @@ namespace Program
         string nombre;
         int ataque ;
         int defensa;
+        List
 
         public string Nombre { get => nombre; set => nombre = value; }
         public int Ataque { get => ataque; set => ataque = value; }
